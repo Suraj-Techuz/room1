@@ -29,7 +29,7 @@ function RotatingRoom({ xPlane }) {
 
   return (
     <group ref={groupRef}> {/* Group to hold the room model and plane helper */}
-      <primitive object={planeHelper} /> {/* Render the plane helper */}
+      {/* <primitive object={planeHelper} /> Render the plane helper */}
       {obj && <primitive object={obj} position={[-5.7, -1.8, 10]} scale={[0.01, 0.01, 0.01]} />} {/* Render the loaded OBJ model if it exists */}
     </group>
   )
