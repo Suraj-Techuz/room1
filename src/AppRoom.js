@@ -20,7 +20,7 @@ function RotatingRoom({ xPlane }) {
   // Rotate the room model each frame
   useFrame((state, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += delta * 0 // Adjust the speed of rotation as needed
+      groupRef.current.rotation.y += delta * -0.3 // Adjust the speed of rotation as needed
     }
   })
 
@@ -57,10 +57,10 @@ export default function App() {
 
       {/* Camera controls to allow user interaction */}
       <OrbitControls 
-        enableZoom={true} // Allow zooming in and out
-        enablePan={true} // Allow panning around the scene
-        maxPolarAngle={Math.PI / 1.7} // Limit the maximum angle for vertical rotation
-        minPolarAngle={Math.PI / 2.5} // Limit the minimum angle for vertical rotation
+        enableZoom={false} // Allow zooming in and out
+        enablePan={false} // Allow panning around the scene
+        maxPolarAngle={Math.PI / 2.25} // Limit the maximum angle for vertical rotation
+        minPolarAngle={Math.PI / 2.25} // Limit the minimum angle for vertical rotation
         maxAzimuthAngle={Math.PI / 15} // Limit the maximum angle for horizontal rotation
         minAzimuthAngle={-Math.PI / 1.7} // Limit the minimum angle for horizontal rotation
         enableDamping={false} // Disable damping for smoother control
